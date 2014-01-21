@@ -6929,7 +6929,7 @@ header#site-head #site-head-content .blog-description {
   font-family: 'Droid Serif', serif;
   letter-spacing: 0;
 }
-body.post-template main.content header.post-header {
+body.post-template .content .post-header {
   position: relative;
   float: left;
   width: 100%;
@@ -6941,7 +6941,23 @@ body.post-template main.content header.post-header {
   padding: 0;
   background: #303538 no-repeat center center;
 }
-body.post-template main.content header.post-header a#blog-title {
+body.post-template .content .post-header:before,
+body.post-template .content .post-header:after {
+  content: " ";
+  display: table;
+}
+body.post-template .content .post-header:after {
+  clear: both;
+}
+body.post-template .content .post-header:before,
+body.post-template .content .post-header:after {
+  content: " ";
+  display: table;
+}
+body.post-template .content .post-header:after {
+  clear: both;
+}
+body.post-template .content .post-header a {
   text-decoration: none;
   font-family: inherit;
   font-weight: 500;
@@ -6954,12 +6970,31 @@ body.post-template main.content header.post-header a#blog-title {
   font-family: 'Open Sans', sans-serif;
   color: white;
 }
-body.post-template main.content header.post-header a#blog-title small,
-body.post-template main.content header.post-header a#blog-title .small {
+body.post-template .content .post-header a small,
+body.post-template .content .post-header a .small {
   font-weight: normal;
   line-height: 1;
   color: #999999;
 }
-body.post-template main.content header.post-header a#blog-title:hover {
+body.post-template .content .post-header a:hover {
   color: #57A3E8;
+}
+body.post-template .content .post {
+  top: 32px;
+}
+body.post-template .content .post:before,
+body.post-template .content .post:after {
+  content: " ";
+  display: table;
+}
+body.post-template .content .post:after {
+  clear: both;
+}
+body.post-template .content .post:before,
+body.post-template .content .post:after {
+  content: " ";
+  display: table;
+}
+body.post-template .content .post:after {
+  clear: both;
 }
