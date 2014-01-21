@@ -1,20 +1,6 @@
 @import "bootstrap/bootstrap.less";
 @import "customVariables.less";
+@import "mixins.less";
 @import "casper.less";
-
-
-body.post-template{
-    main.content{
-        header.post-header {
-            .make-xs-column(12);
-            .text-center;
-            margin-bottom: 60px;
-            padding: 0;
-            background: @gray-dark no-repeat center center;
-            a {
-                text-decoration: none;
-                color: white;
-            }
-        }
-    }
-}
+@import "banner.less";
+@import "single.less";

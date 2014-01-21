@@ -6120,6 +6120,17 @@ td.visible-print {
     display: none !important;
   }
 }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+}
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
@@ -6168,7 +6179,7 @@ td.visible-print {
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
 }
-/* Each icon is created by inserting the corret character into the 
+/* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
   content: "\e000";
@@ -6466,20 +6477,6 @@ table.plain tbody > tr:nth-child(odd) > th {
   left: 8px;
   padding: 6px;
   font-size: 16px;
-}
-/* The details of your blog. Defined in ghost/settings/ */
-.blog-title {
-  margin: 10px 0 10px 0;
-  font-size: 5rem;
-  letter-spacing: -1px;
-}
-.blog-description {
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1.5em;
-  font-weight: 300;
-  font-family: 'Droid Serif', serif;
-  letter-spacing: 0;
 }
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -6919,7 +6916,20 @@ table.plain tbody > tr:nth-child(odd) > th {
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
-   ========================================================================== */body.post-template main.content header.post-header {
+   ========================================================================== */header#site-head #site-head-content .blog-title {
+  margin: 10px 0 10px 0;
+  font-size: 5rem;
+  letter-spacing: -1px;
+}
+header#site-head #site-head-content .blog-description {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-family: 'Droid Serif', serif;
+  letter-spacing: 0;
+}
+body.post-template main.content header.post-header {
   position: relative;
   float: left;
   width: 100%;
@@ -6931,7 +6941,25 @@ table.plain tbody > tr:nth-child(odd) > th {
   padding: 0;
   background: #303538 no-repeat center center;
 }
-body.post-template main.content header.post-header a {
+body.post-template main.content header.post-header a#blog-title {
   text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
   color: white;
+}
+body.post-template main.content header.post-header a#blog-title small,
+body.post-template main.content header.post-header a#blog-title .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+body.post-template main.content header.post-header a#blog-title:hover {
+  color: #57A3E8;
 }
